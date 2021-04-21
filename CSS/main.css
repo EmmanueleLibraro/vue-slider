@@ -18,7 +18,11 @@ body{
     text-align: center;
     color: #fff;
     font-size: 30px;
-    padding: 10px; 
+}
+
+.title h1{
+    padding-top: 20px;
+    margin-top: 20px;
 }
 
 
@@ -27,7 +31,7 @@ body{
     height: 600px;
     width: 1200px;
     margin: 0 auto;
-    margin-top: 100px; 
+    margin-top: 70px; 
 }
 
 .slider .images img{
