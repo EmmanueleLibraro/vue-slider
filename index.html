@@ -23,7 +23,10 @@
     
     <div id="app">
 
-        <section class="slider">
+        <section class="slider"
+        @mouseenter="stopLoop"
+        @mouseleave="startLoop"
+        >
 
             <!-- TITOLO -->
             <div class="title">
@@ -47,9 +50,10 @@
 
             <!-- PALLINI -->
             <div class="nav">
-                <i v-for="(foto, index) in foto"
+                <i v-for="(foto, index) in foto"      
                 class="far fa-circle"
-                :class="{ active: index == indexFoto}"></i>         <!--LUPPIAMO NELL'ARRAY FOTO -->
+                :class="{ active: index == indexFoto}"
+                @click="setFoto(index)"></i>         <!--LUPPIAMO NELL'ARRAY FOTO -->
                 <!-- VALUTA L'INDEX DELLA FOTO E IL PALLINO SI SPOSTA DI CONSEGUENZA-->
             </div>
 
