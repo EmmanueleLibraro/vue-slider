@@ -25,27 +25,32 @@
 
         <section class="slider">
 
+            <!-- TITOLO -->
             <div class="title">
                 <h1>New world Slide</h1>
             </div>
 
-            <div class="prev">
+            <!-- FRECCIA SINISTRA -->
+            <div class="prev" @click="prevFoto">
                 <i class="fas fa-arrow-left"></i>
             </div>
 
+            <!-- IMMAGINI -->
             <div class="images">
-                <img :src="foto" alt="new world image">
+                <img :src="foto[indexFoto]" alt="new world image">
             </div>
 
-            <div class="next">
+            <!-- FRECCIA DESTRA -->
+            <div class="next" @click="nextFoto">
                 <i class="fas fa-arrow-right"></i>
             </div>
 
+            <!-- PALLINI -->
             <div class="nav">
-                <i class="far fa-circle"></i>
-                <i class="far fa-circle"></i>
-                <i class="far fa-circle"></i>
-                <i class="far fa-circle"></i>
+                <i v-for="(foto, index) in foto"
+                class="far fa-circle"
+                :class="{ active: index == indexFoto}"></i>         <!--LUPPIAMO NELL'ARRAY FOTO -->
+                <!-- VALUTA L'INDEX DELLA FOTO E IL PALLINO SI SPOSTA DI CONSEGUENZA-->
             </div>
 
         </section>
