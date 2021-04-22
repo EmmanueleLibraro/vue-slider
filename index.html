@@ -26,6 +26,10 @@
         <section class="slider"
         @mouseenter="stopLoop"
         @mouseleave="startLoop"
+        @keyup.left="prevFoto"
+        @keyup.right="nextFoto"
+        tabindex="0"
+        ref="slider"
         >
 
             <!-- TITOLO -->
@@ -59,9 +63,6 @@
 
         </section>
     </div>
-
-
-
 
 
     <!-- JS -->

@@ -11,7 +11,7 @@ const app = new Vue({
         interval: 0,     //INTERVALLO PER FERMARE LE FOTO
         
     },
-    created(){         //PAROLA CHIAVE PER CREARE ISTANZA VUE 
+    mounted(){         //PAROLA CHIAVE PER CREARE ISTANZA VUE 
         this.startLoop();
     },
     methods: {
@@ -26,7 +26,7 @@ const app = new Vue({
         nextFoto(){
             this.indexFoto ++;    //INCREMENTIAMO IL VALORE DELL'INDEX CON ' + + '
 
-            if(this.indexFoto > (this.foto.length) -1 ){       //SERVE PER RITORNARE ALLA FOTO INIZIALE
+            if(this.indexFoto > (this.foto.length) -1 ){   //SERVE PER RITORNARE ALLA FOTO INIZIALE
                 this.indexFoto = 0;
             }
         },
@@ -37,9 +37,11 @@ const app = new Vue({
             this.interval= setInterval(() => {
                 this.nextFoto();        //OGNI 3 SEC LE IMG CAMBIANO DA SOLE
             }, 3000);
+            this.$refs.slider.blur();
         },
         stopLoop(){
            clearInterval(this.interval);   //FERMA L'AVANZARE DELLE FOTO
+           this.$refs.slider.focus();    //USA IL FOCUS SULLE IMG
         }
         
 

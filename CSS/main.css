@@ -96,11 +96,9 @@ body{
     cursor: pointer;
 }
 
-.nav i.active{
-    background: #fff;
-}
-
+.nav i.active,
 .nav i:hover{
     background: #fff;
 }
+
 
