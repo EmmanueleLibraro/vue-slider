@@ -55,22 +55,18 @@ body{
     color: #fff;
     cursor: pointer;
     transition: background .3s;
-}
-
- .prev{
-    left: 20%;
     display: flex;
     justify-content: center;
     align-items: center;
-    
+}
+
+ .prev{
+    left: 20%; 
 }
 
 .next {
     right: 20%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-} 
+}
 
 .prev:hover,
 .next:hover{
